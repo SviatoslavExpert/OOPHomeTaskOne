@@ -35,6 +35,8 @@ public class Main {
         catBella.print();
         System.out.println();
 
+        /*  Calling the toString() method to see the state of the objects  */
+        System.out.println(catMurchik);
+        System.out.println(catBella);
     }
-
 }

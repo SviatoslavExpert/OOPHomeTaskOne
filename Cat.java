@@ -11,7 +11,9 @@ public class Cat {
     private int intellect;
 
     /* object constructor of Cat class */
-    Cat(String name, String color, double weight, int age, int strength, int health, int intellect) {
+    /*  access modifier: public !!! */
+    public Cat(String name, String color, double weight, int age, int strength, int health, int intellect) {
+        super();            /*  constructor by default  */
         this.name = name;
         this.color = color;
         this.weight = weight;
@@ -101,16 +103,22 @@ public class Cat {
     }
 
     /* changeTwoProperties method  */
-    Cat changeTwoProperties(Cat a, double newWeight, int newAge){
+    /*  access modifier: public !!! */
+    public Cat changeTwoProperties(Cat a, double newWeight, int newAge){
         a.weight = newWeight;
         a.age = newAge;
         return a;
     }
     /*  changeThreeProperties  */
-    Cat changeThreeProperties(Cat b, int newStrength, int newHealth, int newIntellect){
+    /*  access modifier: public !!! */
+    public Cat changeThreeProperties(Cat b, int newStrength, int newHealth, int newIntellect){
         b.strength = newStrength;
         b.health = newHealth;
         b.intellect = newIntellect;
         return b;
+    }
+    /*  The toString() method returns the string representation of the object.  */
+    public String toString() {
+        return "Cat [name=" + name + ", color=" + color + ", weight=" + weight + ",  age=" + age + ", strength=" + strength + ", health=" + health + ", intellect=" + intellect + "]";
     }
 }
